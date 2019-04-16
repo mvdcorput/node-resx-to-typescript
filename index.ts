@@ -107,7 +107,7 @@ export function execute(typeScriptResourcesNamespace: string, virtualResxFolder:
 
                 mkpath.sync(projectRoot + virtualTypeScriptFolder, '0700');
                 
-                fs.writeFileSync(outputFileName, content, null); 
+                fs.writeFileSync(outputFileName, content, function () {}); 
                 
                 addTypeScriptFile.execute(relativeOutputFileName);                          
             }
